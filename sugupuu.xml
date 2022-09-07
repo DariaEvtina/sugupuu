@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<inimene synd="1926">
+	<nimi >
+		Elizabeth II
+	</nimi>
+	<synd>
+		1926
+	</synd>
+	<lapsed>
+		<inimene synd="1950">
+			<nimi>Anne, Princess Royal</nimi>
+
+			<synd>1950</synd>
+			<lapsed>
+				<inimene synd="1977">
+					<nimi>Peter</nimi>
+					<synd>1977</synd>
+				</inimene>
+				<inimene synd="1981">
+					<nimi>Zara</nimi>
+					<synd>1981</synd>
+				</inimene>
+			</lapsed>
+		</inimene>
+		<inimene synd="1948">
+			<nimi>Charles, Prince of Wales</nimi>
+			<synd>1948</synd>
+			<lapsed>
+				<inimene synd="1985">
+					<nimi>Harry</nimi>
+					<lapsed>
+						<inimene synd="2021">
+							<nimi>anon</nimi>
+							<synd>2021</synd>
+						</inimene>
+					</lapsed>
+					<synd>1985</synd>
+				</inimene>
+				<inimene synd="1982">
+					<nimi>William</nimi>
+					<synd>1982</synd>
+				</inimene>
+			</lapsed>
+		</inimene>
+		<inimene synd="1960">
+			<nimi>Andrew, Duke of York</nimi>
+			<synd>1960</synd>
+			<lapsed>
+				<inimene synd="1988">
+					<nimi>Beatrice</nimi>
+					<synd>1988</synd>
+				</inimene>
+				<inimene synd="1990">
+					<nimi>Eugenie</nimi>
+					<synd>1990</synd>
+				</inimene>
+			</lapsed>
+		</inimene>
+		<inimene synd="1964">
+			<nimi>Edward, Earl of Wessex</nimi>
+			<synd>1964</synd>
+			<lapsed>
+				<inimene synd="2005">
+					<nimi>Louise</nimi>
+					<synd>2005</synd>
+				</inimene>
+				<inimene synd="2007">
+					<nimi>James</nimi>
+					<synd>2007</synd>
+				</inimene>
+			</lapsed>
+		</inimene>
+		
+	</lapsed>
+</inimene>
