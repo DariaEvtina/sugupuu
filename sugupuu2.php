@@ -179,6 +179,48 @@ foreach ($peoples as $people){
 
 
 </table>
-
+<h1>Сделать таблицу с отображением имен и года рождения: В левом столбике люди с годом рождения до 2000 года, а во втором - после 2000 года</h1>
+<table border="1">
+    <tr>
+        <th>nimi</th>
+        <th>enne 2000</th>
+        <th>nimi</th>
+        <th>pärast 2000</th>
+    </tr>
+    <tr>
+        <?php
+        foreach ($peoples as $people) {
+            echo '<tr>';
+            if ($people->attributes()->synd<2000){
+                echo '<td>' . $people->nimi . '</td>';
+                echo '<td>' . $people->attributes()->synd . '</td>';
+                echo '<td> </td>';
+                echo '<td> </td>';
+            }
+            else if ($people->attributes()->synd>2000){
+                echo '<td> </td>';
+                echo '<td> </td>';
+                echo '<td>' . $people->nimi . '</td>';
+                echo '<td>' . $people->attributes()->synd . '</td>';
+            }
+            echo '</tr>';
+        }
+        ?>
+    </tr>
+</table>
+<h1> Отображать имена людей, у которых 13 и более букв в имени и вдобавок у кого год рождения до 1990.</h1>
+<ul>
+    <?php
+    foreach ($peoples as $people) {
+        echo '<li>';
+        if ((strlen($people->nimi))>=13){
+            if ($people->attributes()->synd<1990){
+                echo  $people->nimi .' '. $people->attributes()->synd ;
+            }
+        }
+        echo '</li>';
+    }
+    ?>
+</ul>
 </body>
 </html>
