@@ -30,10 +30,10 @@ if ($people==null) return null;
     return null;
     }
 }
-$peoples=getPeopels($xml);
 function hasChildren($people){
     return !empty($people->lapsed->inimene);
 }
+$peoples=getPeopels($xml);
 ?>
 <!DOCTYPE html>
 <html lang="et">
@@ -70,27 +70,30 @@ foreach ($peoples as $people){
         <th>Sünniaasta</th>
         <th>Vanus</th>
     </tr>
+    <tr>
     <?php
     foreach ($peoples as $people){
         $parent=getParent($peoples,$people);
         if (empty($parent)) continue;
-        $parentOfparent=getParent($peoples,$parent);
+        $parentOfParent=getParent($peoples,$parent);
+
         echo '<tr>';
         if (empty($parentOfparent)){
             echo '<td bgcolor="yellow">puudub</td>';
         }
         else
 
-            echo '<td>'.$parentOfparent->nimi.'</td>';
-            echo '<td>'.$parent->nimi.'</td>';
-            echo '<td>'.$people->nimi.'</td>';
-            echo '<td>'.$people->attributes()->synd.'</td>';
-        $yearNow=date("Y");
+            echo '<td>'.$parentOfParent->nimi.'</td>';
+        echo '<td>'.$parent->nimi.'</td>';
+        echo '<td>'.$people->nimi.'</td>';
+        echo '<td>'.$people->attributes()->synd.'</td>';
+        $yearNow=(int)date("Y");
         $childrenYear=$people->attributes()->synd;
-            echo '<td>'.($yearNow - $childrenYear).'</td>';
+        echo '<td>'.($yearNow - $childrenYear).'</td>';
         echo '</tr>';
     }
     ?>
+    </tr>
 </table>
 </body>
 </html>
